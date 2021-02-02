@@ -11,7 +11,7 @@ export class TodoListView {
    */
   createElement(todoItems, { onUpdateTodo, onDeleteTodo }) {
     const todoListElement = element`<ul />`;
-    todoItems.forEachElement(todoItem => {
+    todoItems.forEach(todoItem => {
       const todoItemView = new TodoItemView();
       const todoItemElement = todoItemView.createElement(todoItem, {
         onDeleteTodo,

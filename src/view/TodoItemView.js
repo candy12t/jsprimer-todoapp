@@ -22,15 +22,15 @@ export class TodoItemView {
     const inputCheckboxElement = todoItemElement.querySelector(".checkbox");
     inputCheckboxElement.addEventListener("change", () => {
       onUpdateTodo({
-        id: item.id,
-        completed: !item.completed
+        id: todoItem.id,
+        completed: !todoItem.completed
       });
     });
 
     const deleteButtonElement = todoItemElement.querySelector(".delete");
     deleteButtonElement.addEventListener("click", () => {
       onDeleteTodo({
-        id: item.id
+        id: todoItem.id
       });
     });
 
